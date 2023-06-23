@@ -1,0 +1,83 @@
+body{
+    background-image:url('./login-gif.gif')
+}
+form{
+    background-color: rgba(25, 32, 110, 0.511);
+    padding: 15vh 5vh 5vh 5vh;
+    border-radius: 1rem;
+    box-shadow:3px 3px 6px 2px rgba(0, 0, 0, 0.5);
+    
+}
+input[type="text"] {
+    background-color: rgba(72, 81, 177, 0.511);
+    border-radius: 10px;
+    width: 100%;
+    height: 150%;
+    border:none;
+}
+input[type="password"] {
+    background-color: rgba(72, 81, 177, 0.511);
+    border-radius: 10px;
+    width: 100%;
+    height: 150%;
+    border:none;
+}
+button{
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 3% 5.5rem;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+button:hover{
+    background-color: #4caf4fa9;
+    border: none;
+    color: white;
+    padding: 3% 5.5rem;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+.container{
+    
+    display:grid;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding-bottom: 30vh;
+
+}
+.brand{
+    display: grid;
+    justify-content: center;
+    margin: 0vh 0vh 3vh 0vh;
+}
+.inputs{
+    display: grid;
+    grid-gap:4vh;
+}
+.button{
+    display: grid;
+    padding: 20% 0 0% 0;
+    justify-content: center;
+}
+.registerLink{
+    padding-top: 5px;
+    color: aliceblue;
+}
+.brand{
+    color: aliceblue;
+}

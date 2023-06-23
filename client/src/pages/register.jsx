@@ -5,6 +5,7 @@ import { Link,useNavigate } from 'react-router-dom';
 import {ToastContainer,toast} from "react-toastify";
 import 'react-toastify/dist/ReactToastify.css';
 import axios from "axios";
+import '../styles/register.css';
 import { registerRoute } from '../utils/APIRoutes';
 export default function Register() {
   const navigate=useNavigate();
@@ -15,10 +16,14 @@ export default function Register() {
     confirmPassword:"",
   });
   const toastOptions={
-  position:"bottom-right",
-  autoClose:8000,
-  draggable: true,
-  theam:"dark",
+    position: "bottom-right",
+    autoClose: 8000,
+    hideProgressBar: false,
+    closeOnClick: true,
+    pauseOnHover: true,
+    draggable: true,
+    progress: undefined,
+    theme: "dark",
   }
   const handleSubmit= async (event)=>{
     console.log("submitted",registerRoute);
@@ -67,12 +72,13 @@ export default function Register() {
       setValues({...values,[event.target.name]:event.target.value})
   }
   return (
-    <>
-      <form onSubmit={(e)=>handleSubmit(e)}>
-        <div className='brand'>
+    <div className='container'>
+      <div className='brand'>
           <img src='' alt=''></img>
           <h1>Chit-Chat</h1>
         </div>
+      <form onSubmit={(e)=>handleSubmit(e)}>
+        <div className='inputs'>
         <input type='text' 
         placeholder='Username' 
         name='username' 
@@ -89,12 +95,17 @@ export default function Register() {
         placeholder='Conform Password' 
         name='confirmPassword' 
         onChange={(e)=>handleChange(e)}/>
+        </div>
+        <div className='button'>
         <button type='submit'>Create User</button>
+        </div>
+        <div className='loginLink'>
         <span>Already have an account?<Link to="/login">Login</Link></span>
+        </div>
       </form>
       
 
       <ToastContainer/>
-    </>
+    </div>
   )
 }

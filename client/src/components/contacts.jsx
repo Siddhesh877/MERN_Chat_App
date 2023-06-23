@@ -1,4 +1,5 @@
-import React,{useState,useEffect} from 'react'
+import React,{useState,useEffect} from 'react';
+import '../styles/contact.css';
 
 export default function Contacts({contacts,currentUser}) {
 
@@ -35,7 +36,6 @@ return (
                                 <div className='username'>
                                     <h3>{contact.username}</h3>
                                 </div>
-
                             </div>
                         })
                     }

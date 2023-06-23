@@ -6,6 +6,7 @@ import {ToastContainer,toast} from "react-toastify";
 import 'react-toastify/dist/ReactToastify.css';
 import axios from "axios";
 import { loginRoute } from '../utils/APIRoutes';
+import '../styles/login.css'
 export default function Login() {
   const navigate=useNavigate();
   const [values,setValues]=useState({
@@ -70,12 +71,13 @@ export default function Login() {
       setValues({...values,[event.target.name]:event.target.value})
   }
   return (
-    <>
-      <form onSubmit={(e)=>handleSubmit(e)}>
-        <div className='brand'>
+    <div className='container'>
+      <div className='brand'>
           <img src='' alt=''></img>
           <h1>Chit-Chat</h1>
         </div>
+      <form onSubmit={(e)=>handleSubmit(e)}>
+        <div className='inputs'>
         <input type='text' 
         placeholder='Username' 
         name='username' 
@@ -85,13 +87,17 @@ export default function Login() {
         placeholder='Password' 
         name='password' 
         onChange={(e)=>handleChange(e)}/>
-        
+        </div>
+        <div className='button'>
         <button type='submit'>Login</button>
+        </div>
+        <div className='registerLink'>
         <span>Don't have an account?<Link to="/register">Register</Link></span>
+        </div>
       </form>
       
 
       <ToastContainer/>
-    </>
+    </div>
   )
 }
