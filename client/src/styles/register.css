@@ -2,34 +2,38 @@ body{
     background-image:url('./login-gif.gif')
 }
 form{
-    background-color: rgba(25, 32, 110, 0.511);
+    background-color: rgba(24, 24, 26, 0.511);
     padding: 15vh 5vh 5vh 5vh;
     border-radius: 1rem;
     box-shadow:3px 3px 6px 2px rgba(0, 0, 0, 0.5);
     
 }
 input[type="text"] {
-    background-color: rgba(72, 81, 177, 0.511);
+    background-color: rgba(35, 36, 53, 0.511);
     border-radius: 10px;
     width: 100%;
     height: 150%;
     border:none;
 }
 input[type="password"] {
-    background-color: rgba(72, 81, 177, 0.511);
+    background-color: rgba(35, 36, 53, 0.511);
     border-radius: 10px;
     width: 100%;
     height: 150%;
     border:none;
 }
 input[type="email"]{
-    background-color: rgba(72, 81, 177, 0.511);
+    background-color: rgba(35, 36, 53, 0.511);
     border-radius: 10px;
     width: 100%;
     height: 150%;
     border:none;
 }
-button{
+/* button{
+    border: none;
+    background-color: #4CAF50;
+} */
+.registerButton{
     background-color: #4CAF50;
     border: none;
     color: white;
@@ -40,8 +44,9 @@ button{
     font-size: 16px;
     cursor: pointer;
     border-radius: 5px;
+    margin-top: 50px;
 }
-button:hover{
+.registerButton:hover{
     background-color: #4caf4fa9;
     border: none;
     color: white;
@@ -52,6 +57,7 @@ button:hover{
     font-size: 16px;
     cursor: pointer;
     border-radius: 5px;
+    margin-top: 50px;
 }
 .container{
     display:grid;

@@ -14,10 +14,14 @@ export default function Login() {
     password:"",
   });
   const toastOptions={
-  position:"bottom-right",
-  autoClose:8000,
-  draggable: true,
-  theam:"dark",
+    position: "bottom-right",
+    autoClose: 800000,
+    hideProgressBar: false,
+    closeOnClick: true,
+    pauseOnHover: true,
+    draggable: true,
+    progress: undefined,
+    theme: "dark",
   }
   // useEffect(()=>{
   //   if(localStorage.getItem('chat-app-user'))
@@ -88,8 +92,8 @@ export default function Login() {
         name='password' 
         onChange={(e)=>handleChange(e)}/>
         </div>
-        <div className='button'>
-        <button type='submit'>Login</button>
+        <div >
+        <button className='loginButton' type='submit'>Login</button>
         </div>
         <div className='registerLink'>
         <span>Don't have an account?<Link to="/register">Register</Link></span>

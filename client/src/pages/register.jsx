@@ -96,11 +96,11 @@ export default function Register() {
         name='confirmPassword' 
         onChange={(e)=>handleChange(e)}/>
         </div>
-        <div className='button'>
-        <button type='submit'>Create User</button>
+        <div >
+        <button className='registerButton' type='submit'>Create User</button>
         </div>
         <div className='loginLink'>
-        <span>Already have an account?<Link to="/login">Login</Link></span>
+        <span>Already have an account? <Link to="/login">Login</Link></span>
         </div>
       </form>
       
