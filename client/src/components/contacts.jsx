@@ -18,9 +18,9 @@ const [currentSelected,setCurrentSelected]=useState(undefined);
   },[currentUser]);
 const changeCurrrentChat =(index,contact)=>{}
 return (
-    <>
-      {
-        currentUserImage && currentUserName && (
+    // <>
+    //   {/* { */}
+        // {/* // currentUserImage && currentUserName && ( */}
             <div className='container'>
                 <div className='brand'>
                     <img src='' alt='logo'/>
@@ -42,15 +42,15 @@ return (
                 </div>
                 <div className='current-user'>
                 <div className='avatar'>
-                    <img src={`data:image/svg+xml;base64,${currentUserImage.avatarImage}`} alt="avatar" />
+                    <img src={`data:image/svg+xml;base64,${currentUserImage}`} alt="avatar" />
                 </div>
                 <div className='username'>
                     <h3>{currentUser.username}</h3>
                 </div>
                 </div>
             </div>
-        )
-      }
-    </>
+        // {/* // ) */}
+    //   {/* } */}
+    // </>
 )
 }

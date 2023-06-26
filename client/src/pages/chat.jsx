@@ -7,7 +7,7 @@ import '../styles/chat.css';
 function Chat() {
   const navigate=useNavigate();
   const [contacts,setContacts]=useState([]);
-  const [currentUser,setCurrentUser]=useState(undefined);
+  const [currentUser,setCurrentUser]=useState(JSON.parse(localStorage.getItem("chat-app-user")));
   useEffect(()=>{
     async function fetchData(){
     if(!localStorage.getItem("chat-app-user")){
@@ -16,6 +16,7 @@ function Chat() {
     else
     {
       setCurrentUser(await JSON.parse(localStorage.getItem("chat-app-user")));
+      console.log(currentUser)
     }
   }
   fetchData();
@@ -24,9 +25,11 @@ function Chat() {
     async function fetchData(){
       if(currentUser)
       {
-        if(currentUser.isAvatarImageSet){
+        if(currentUser.enteredUser.isAvatarImageSet){
           const data=await axios.get(`${allUserRoute}/${currentUser.enteredUser._id}`);
           setContacts(data.data);
+          console.log(data.data);
+
         }
         else
         { 
@@ -37,9 +40,10 @@ function Chat() {
     fetchData();
   },[])
   return (
-      <div className='container'>
-        <Contacts contacts={contacts} currentUser={currentUser}/>
-      </div>
+    
+      // <div className='container'>
+        <Contacts contacts={contacts} currentUser={currentUser.enteredUser}/>
+      // </div>
   )
 }
 

@@ -23,12 +23,12 @@ export default function Login() {
     progress: undefined,
     theme: "dark",
   }
-  // useEffect(()=>{
-  //   if(localStorage.getItem('chat-app-user'))
-  //   {
-  //     navigate("/");
-  //   }
-  // },[])
+  useEffect(()=>{
+    if(localStorage.getItem('chat-app-user'))
+    {
+      navigate("/");
+    }
+  },[])
   const handleSubmit= async (event)=>{
     console.log("submitted",loginRoute);
     event.preventDefault();
