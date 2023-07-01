@@ -73,7 +73,7 @@ export default function Register() {
   }
   return (
     <div className='container'>
-      <div className='brand'>
+      <div className='register-brand'>
           <img src='' alt=''></img>
           <h1>Chit-Chat</h1>
         </div>

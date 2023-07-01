@@ -76,7 +76,7 @@ export default function Login() {
   }
   return (
     <div className='container'>
-      <div className='brand'>
+      <div className='login-brand'>
           <img src='' alt=''></img>
           <h1>Chit-Chat</h1>
         </div>

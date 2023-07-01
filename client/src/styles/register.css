@@ -67,7 +67,7 @@ input[type="email"]{
     /* background-position: center center; */
     /* background-size: cover; */
 }
-.brand{
+.register-brand{
     display: grid;
     justify-content: center;
     margin: 0vh 0vh 3vh 0vh;

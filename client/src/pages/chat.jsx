@@ -40,10 +40,11 @@ function Chat() {
     fetchData();
   },[])
   return (
-    
-      // <div className='container'>
+      <div className='ChatContainer'>
+      <div className='chat-container'>
         <Contacts contacts={contacts} currentUser={currentUser.enteredUser}/>
-      // </div>
+      </div>
+      </div>
   )
 }
 

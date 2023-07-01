@@ -67,7 +67,7 @@ input[type="password"] {
     padding-bottom: 30vh;
 
 }
-.brand{
+.login-brand{
     display: grid;
     justify-content: center;
     margin: 0vh 0vh 3vh 0vh;
