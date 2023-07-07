@@ -4,10 +4,12 @@ import { useNavigate } from 'react-router-dom';
 import { allUserRoute } from '../utils/APIRoutes';
 import Contacts from '../components/contacts';
 import '../styles/chat.css';
+import Welcome from '../components/welcome';
 function Chat() {
   const navigate=useNavigate();
   const [contacts,setContacts]=useState([]);
   const [currentUser,setCurrentUser]=useState(JSON.parse(localStorage.getItem("chat-app-user")));
+  const [currentChat,setCurrentChat]=useState(undefined);
   useEffect(()=>{
     async function fetchData(){
     if(!localStorage.getItem("chat-app-user")){
@@ -38,11 +40,15 @@ function Chat() {
       }
     }
     fetchData();
-  },[])
+  },[currentUser]);
+  const handleChatChange=(chat)=>{
+    setCurrentChat(chat);
+  }
   return (
       <div className='ChatContainer'>
       <div className='chat-container'>
-        <Contacts contacts={contacts} currentUser={currentUser.enteredUser}/>
+        <Contacts contacts={contacts} currentUser={currentUser.enteredUser} changeChat={handleChatChange}/>
+        <Welcome currentUser={currentUser}/>
       </div>
       </div>
   )
