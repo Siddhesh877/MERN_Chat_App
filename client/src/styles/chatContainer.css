@@ -1,0 +1,86 @@
+.ChatContainer-chat-header{
+    /* display: flex; */
+    /* justify-content: space-between; */
+    align-items: center;
+    padding: 0 2rem;
+}
+.ChatContainer-userDetails{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+}
+.ChatContainer-avatar-image{
+    height: 2.5rem;
+}
+.ChatContainer-username{
+    color: aliceblue;
+    padding-left: 0.8rem;
+}
+.ChatContainer-avatar{
+    display: flex;
+    padding:1rem 0 0 0;
+}
+.Logout-button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0.5rem;
+    background-color: rgba(244, 0, 0, 0.719);
+    border:none;
+    border-radius: 0.5rem;
+    color: aliceblue;
+    cursor: pointer;
+    svg{
+        font-size: 1.3rem;
+    }
+}
+.chatContainer-container{
+    display: grid;
+    grid-template-rows: 10% 80% 10%;
+}
+.chatContainer-Messages{
+    height:80%;
+}
+.chatInput-inputContainer{
+    display: flex;
+    justify-content: space-between;
+    height:80%;
+    width:100%;
+    padding:0 1rem 0 1rem;
+    background-color:none;
+
+}
+.chatInput-container{
+    display: flex;
+    justify-content: space-between;
+    /* align-items: center; */
+    height:80%;
+    width:100%;
+    padding:0;
+}
+.chatInput-submit{
+    display: flex;
+    padding: 0.3rem 2rem;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(2, 129, 29);
+    border: none;
+    border-radius: 10rem;
+    color: white;
+    font-size: 1.5rem;
+    
+}
+.chatInput-input{
+    /* height:0%; */
+    width: 100%;
+    padding: 0;
+    background-color: rgba(24, 24, 26, 0.139);
+    border: none;
+    user-select:contain;
+    color: aliceblue;
+}
+.chatInput-button-container{
+    width: 3rem;
+    padding: 0 0 0 1rem;
+}

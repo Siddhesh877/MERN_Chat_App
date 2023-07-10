@@ -18,6 +18,13 @@ export default function SetAvatar() {
         draggable: true,
         theam:"dark",
     };
+    useEffect(async()=>{
+        if(!localStorage.getItem(process.env.REACT_APP_LOCALHOST_KEY))
+        {
+            navigate("/login");
+        }
+
+    },[]);
     const setProfilePicture=async()=>{
         console.log("in setProfilePicture");
         if(selectedAvatar===undefined)
