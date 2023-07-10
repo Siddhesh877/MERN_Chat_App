@@ -68,7 +68,7 @@
     border: none;
     border-radius: 10rem;
     color: white;
-    font-size: 1.5rem;
+    font-size: 1.4rem;
     
 }
 .chatInput-input{
@@ -83,4 +83,14 @@
 .chatInput-button-container{
     width: 3rem;
     padding: 0 0 0 1rem;
+}
+.chatInput-emoji{
+    .EmojiPickerReact{
+        position: absolute;
+        
+        
+        top: -450px;
+    }
+    height: 0;
+    
 }

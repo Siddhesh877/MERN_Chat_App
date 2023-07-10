@@ -1,12 +1,35 @@
-import React from 'react'
+import React,{useEffect,useState} from 'react'
 import '../styles/chatContainer.css';
 import Logout from './Logout';
 import ChatInput from './chatInput';
-import Messages from './Messages';
-export default function ChatContainer({currentChat}) {
+import axios from 'axios';
+import { getAllMessagesRoute, sendMessageRoute } from '../utils/APIRoutes';
+export default function ChatContainer({currentChat,currentUser}) {
+    const [messages,setMessages]=useState([]);
+    console.log(currentChat)
+    useEffect(()=>{
+        async function fun(){
+            // console.log(currentUser.enteredUser._id,currentChat._id);
+            const response=await axios.post(getAllMessagesRoute,{
+                from:currentUser.enteredUser._id,
+                to:currentChat._id,
+            });
+            setMessages(response.data);
+        }
+         if(currentChat)
+         {
+            fun();
+            console.log("inside useEffect");
+         } 
+    },[currentChat,currentUser.enteredUser._id]);
+    
     const handleSendMsg=async(msg)=>{
-         
-    }
+         await axios.post(sendMessageRoute,{
+            from:currentUser.enteredUser._id,
+            to:currentChat._id,
+            message:msg,
+         })
+    };
   return (
         <>
         {
@@ -26,7 +49,24 @@ export default function ChatContainer({currentChat}) {
             </div>
         </div>
         
-        <Messages/>
+        <div className="chat-Messages">
+            {   
+                messages.map((message)=>{
+                    return(
+                        <div>
+                            <div className={`message ${message.fromSelf ? "sended" : "recieved"}`}>
+                                <div className="content">
+                                    <p>
+                                        {message.message}
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    )
+                })
+            }
+            {console.log(messages)}
+        </div>
         <ChatInput handleSendMsg={handleSendMsg}/>
         
    </div>)}
