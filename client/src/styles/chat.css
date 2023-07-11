@@ -4,8 +4,17 @@
     background-color: #00000076;
     display:grid;
     grid-template-columns: 25% 75%;
+    overflow:scroll;
     @media screen and (min-width: 720px) and (max-width: 1080px) {
       grid-template-columns: 35% 65%;
+}
+&::-webkit-scrollbar {
+  width: 0.2rem;
+  &-thumb {
+    background-color: #ffffff39;
+    width: 0.1rem;
+    border-radius: 1rem;
+  }
 }
 }
 .ChatContainer{
@@ -17,4 +26,12 @@
   gap: 1rem;
   align-items: center;
   background-color: #13131f;
+  &::-webkit-scrollbar {
+    width: 0.2rem;
+    &-thumb {
+      background-color: #ffffff39;
+      width: 0.1rem;
+      border-radius: 1rem;
+    }
+  }
 }
