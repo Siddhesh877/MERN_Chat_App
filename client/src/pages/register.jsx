@@ -6,7 +6,7 @@ import {ToastContainer,toast} from "react-toastify";
 import 'react-toastify/dist/ReactToastify.css';
 import axios from "axios";
 import '../styles/register.css';
-import { registerRoute } from '../utils/APIRoutes';
+import { registerRoute,setAvatarRoute } from '../utils/APIRoutes';
 export default function Register() {
   const navigate=useNavigate();
   const [values,setValues]=useState({
@@ -43,7 +43,7 @@ export default function Register() {
       if(data.status===true)
       {
         localStorage.setItem('chat-app-user',JSON.stringify(data))
-        navigate("/");
+        navigate("/setAvatarRoute");
       }
     }
   }
