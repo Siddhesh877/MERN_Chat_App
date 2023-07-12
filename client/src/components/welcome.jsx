@@ -4,6 +4,7 @@ import '../styles/welcome.css';
 export default function Welcome({currentUser}) {
   
   return (
+    currentUser && 
     <div className='welcome-container'>
       {/* <img className='welcome-gif' src={Gif} alt='animation'/> */}
       <div className='welcome'>
