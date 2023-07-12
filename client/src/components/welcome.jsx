@@ -4,7 +4,8 @@ import '../styles/welcome.css';
 export default function Welcome({currentUser}) {
   
   return (
-    currentUser && 
+    <>{
+    currentUser && (
     <div className='welcome-container'>
       {/* <img className='welcome-gif' src={Gif} alt='animation'/> */}
       <div className='welcome'>
@@ -17,6 +18,8 @@ export default function Welcome({currentUser}) {
         Please select a chat to Start Messaging
       </h5>
       </div>
-    </div>
+    </div>)
+
+}</>
   )
 }

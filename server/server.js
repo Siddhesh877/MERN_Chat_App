@@ -21,8 +21,8 @@ const server=app.listen(port,()=>{
 });
 const io=socket(server,{
     cors:{
-        // origin:"http://localhost:3000",
-        origin:"https://buzzchatapp.netlify.app",
+        origin:"http://localhost:3000",
+        // origin:"https://buzzchatapp.netlify.app",
         credentials:true,
     },
 });
