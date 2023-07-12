@@ -2,14 +2,7 @@ import React,{useEffect,useState} from 'react';
 import Gif from '../props/chatGif.gif';
 import '../styles/welcome.css';
 export default function Welcome({currentUser}) {
-  const [userName, setUserName] = useState("");
-  useEffect(async () => {
-    setUserName(
-      await JSON.parse(
-        localStorage.getItem("chat-app-user")
-      ).username
-    );
-  }, []);
+  
   return (
     <div className='welcome-container'>
       {/* <img className='welcome-gif' src={Gif} alt='animation'/> */}
