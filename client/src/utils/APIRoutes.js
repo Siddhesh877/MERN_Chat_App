@@ -1,4 +1,4 @@
-export const host ="https://buzzchat.onrender.com";
+export const host ="https://buzzchatapp.netlify.app";
 export const registerRoute=`${host}/api/auth/register`;
 export const loginRoute=`${host}/api/auth/login`;
 export const setAvatarRoute=`${host}/api/auth/setAvatar`;
