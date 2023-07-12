@@ -11,7 +11,7 @@ function Chat() {
   const socket=useRef();
   const navigate=useNavigate();
   const [contacts,setContacts]=useState([]);
-  const [currentUser,setCurrentUser]=useState(JSON.parse(localStorage.getItem("chat-app-user")));
+  const [currentUser,setCurrentUser]=useState(undefined);
   const [currentChat,setCurrentChat]=useState(undefined);
   const [isLoaded,setIsLoaded]=useState(false);
   useEffect(()=>{
@@ -59,7 +59,7 @@ function Chat() {
   return (
       <div className='ChatContainer'>
       <div className='chat-container'>
-        <Contacts contacts={contacts} currentUser={currentUser.enteredUser} changeChat={handleChatChange}/>
+        <Contacts contacts={contacts} currentUser={currentUser} changeChat={handleChatChange}/>
         {
          isLoaded &&  currentChat===undefined?(<Welcome currentUser={currentUser}/>):
           (<ChatContainer currentChat={currentChat} currentUser={currentUser} socket={socket}/>)

@@ -12,8 +12,8 @@ const [currentSelected,setCurrentSelected]=useState(undefined);
     console.log(contacts);
     if(currentUser)
     {
-        setCurrentUserImage(currentUser.avatarImage);
-        setCurrentUserName(currentUser.username);
+        setCurrentUserImage(currentUser.enteredUser.avatarImage);
+        setCurrentUserName(currentUser.enteredUser.username);
     }
 
   },[currentUser]);
@@ -51,7 +51,7 @@ return (
                     <img className='current-avatar-image' src={`data:image/svg+xml;base64,${currentUserImage}`} alt="avatar" />
                 </div>
                 <div className='username'>
-                    <h3 className='username-text'>{currentUser.username}</h3>
+                    <h3 className='username-text'>{currentUser.enteredUser.username}</h3>
                 </div>
                 </div>
             </div>
